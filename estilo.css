@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+}
+
+
+
+body{
+    background: rgb(0, 0, 0);
+    color:white;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+h1{
+    
+font-family: 'Nunito', sans-serif;
+font-size: 30px ;
+}
+h1 strong{
+    color:#99cc00 ;
+}
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px; 
+    display: flex;
+    height: inherit;
+}
+/*
+.padre{
+    background: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+}
+
+.hijo{
+    background: orange;
+    width: 200px;
+    height: 200px;
+    border: 2px solid yellowgreen;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+*/
+.aplicar{
+    height: 300px;
+    background:white ;
+    display:flex;
+    color: black;
+    
+    
+}
+.aplicar-detalles{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    text-align: center;
+
+}
+.aplicar-detalles img{
+    height: 90%;
+}
+
+.header{
+    background: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0px 10px;
+}
+
+.header li{
+    height: inherit;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.logo img{
+    width: 100px;}
+ 
+ .menu{
+     height:inherit;
+
+ }
+
+
+.principal{
+    background: rgb(192, 211, 248);
+    background-image: url( 'img/dk_7.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    font-family: 'Notable', sans-serif;
+    text-align: center;
+    padding: 100px;
+    
+}
+
+.principal img{
+    width:260px;
+}
+
+.principal-boton{
+    width: 250px;
+    height: 40px;
+    background-color: #f9fcf1;
+    border-radius: 24px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.somos {
+    background-color: rgb(255, 253, 250);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding:  50px;
+    margin: 50px ;
+    font-size: 20px;
+}
+.somos h2{
+    color: #060701;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.somos p{
+    margin-bottom: 20px;
+}
+.tercera{
+    background-color: black;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding: 50px 100px 25px 200px;
+    margin: 25px 50px 200px 100px;
+}
+
+
+
+
