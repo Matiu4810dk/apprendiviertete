@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Notable&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Notable&family=Nunito:wght@700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>shorts cool </title>
+    <title> Apprendiviertete </title>
 </head>
 <body>
     <header class="header">
@@ -37,8 +37,9 @@
      <h2>¿Qué es apprendiviertete? </h2>
      <p>Es la plataforma de cursos, talleres y platicas para saber cuales son los mejores metodos de educación </p>
      <!--iframe width="560" height="315" img src="img/dk_12.jpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-     <iframe width="560" height="315" src="https://www.youtube.com/watch?v=3R6IJlLfJc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
+     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/zDbneF5ldBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    <div id="player"></div>
+	</section>
 
     <!--<div class="padre">
         <div class="hijo">
@@ -50,7 +51,7 @@
         
     </div>-->
     
-<section class="aplicar">
+<section class="aplicar" id="principal3" >
     <div class="aplicar-detalles">
         <h2><!--¿Quién deberia aplicar?--></h2>
         <br>
@@ -61,5 +62,47 @@
         <img src="img/dk_9.png" alt="">
     </figure>
 </section>
+<script>
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '360',
+      width: '640',
+      videoId: '3R6IJlLfJc4',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  // 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  var done = false;
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+      setTimeout(stopVideo, 6000);
+      done = true;
+    }
+  }
+  function stopVideo() {
+    player.stopVideo();
+  }
+</script>
 </body>
 </html
